@@ -92,7 +92,6 @@
     gh
     wl-clipboard
     ripgrep
-    vimPlugins.semshi
     git-filter-repo
   ];
 
