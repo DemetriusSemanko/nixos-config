@@ -93,6 +93,7 @@
     wl-clipboard
     ripgrep
     git-filter-repo
+    nix-inspect
   ];
 
   # Some programs need SUID wrappers, can be configured further or are

@@ -11,7 +11,6 @@
 
   outputs = { self, nixpkgs, nixvim, home-manager, nix-inspect, ... }@inputs: {
     nixosConfigurations.delphi = nixpkgs.lib.nixosSystem {
-	specialArgs = { inherit inputs; };
 	modules = [
 	    ./configuration.nix
             home-manager.nixosModules.home-manager
