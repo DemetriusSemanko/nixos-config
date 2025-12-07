@@ -3,7 +3,6 @@
 	inputs.nixvim.homeModules.nixvim
     ];
     home.stateVersion = "26.05";
-    
     programs.nixvim = {
     	enable = true;
 	colorschemes.catppuccin.enable = true;
@@ -14,6 +13,5 @@
 	        highlight.enable = true;
 	    };
 	};
-    };
-
+    };   
 }
