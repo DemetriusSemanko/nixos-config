@@ -14,4 +14,7 @@
 	    };
 	};
     };   
+    home.packages = [
+	inputs.nix-inspect.packages.x86_64-linux.default
+    ];
 }

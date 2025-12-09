@@ -93,7 +93,6 @@
     wl-clipboard
     ripgrep
     git-filter-repo
-    inputs.nix-inspect.packages.x86_64-linux.default
   ];
 
   # Some programs need SUID wrappers, can be configured further or are
