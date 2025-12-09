@@ -2,7 +2,7 @@
 # your system.  Help is available in the configuration.nix(5) man page
 # and in the NixOS manual (accessible by running ‘nixos-help’).
 
-{ config, pkgs, ... }:
+{ config, pkgs, inputs, ... }:
 
 {
   imports =
@@ -93,7 +93,7 @@
     wl-clipboard
     ripgrep
     git-filter-repo
-    nix-inspect
+    inputs.nix-inspect.packages.x86_64-linux.default
   ];
 
   # Some programs need SUID wrappers, can be configured further or are
