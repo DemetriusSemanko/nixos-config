@@ -8,12 +8,10 @@
 	url = "github:nix-community/home-manager";
 	inputs.nixpkgs.follows = "nixpkgs";
     };
-    nix-inspect.url = "github:bluskript/nix-inspect";
   };
 
-  outputs = { self, nixpkgs, nixvim, home-manager, nix-inspect, ... }@inputs: {
+  outputs = { self, nixpkgs, nixvim, home-manager, ... }@inputs: {
     nixosConfigurations.delphi = nixpkgs.lib.nixosSystem {
-	specialArgs = { inherit inputs; };
 	modules = [
 	    ./configuration.nix
             home-manager.nixosModules.home-manager

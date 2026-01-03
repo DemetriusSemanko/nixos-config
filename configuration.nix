@@ -86,13 +86,14 @@
     vim
     wget
     firefox
-    python314
+    python313
     neovim
     cargo
     gh
     wl-clipboard
     ripgrep
     git-filter-repo
+    python313Packages.numpy
   ];
 
   # Some programs need SUID wrappers, can be configured further or are
