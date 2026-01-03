@@ -1,8 +1,14 @@
-{inputs, ...}: {
+{inputs, pkgs, ...}: {
     imports = [
 	inputs.nixvim.homeModules.nixvim
     ];
+
     home.stateVersion = "26.05";
+    programs.yazi = {
+    	enable = true;
+	enableBashIntegration = true;
+    };
+    programs.bash.enable = true;
     programs.nixvim = {
     	enable = true;
 	colorschemes.catppuccin.enable = true;
@@ -13,8 +19,21 @@
 	        highlight.enable = true;
 	    };
 	};
+
+	lsp = {
+	    servers.ruff.enable = true;
+	};
+	plugins.lspsaga.enable = true;
+	plugins.web-devicons.enable = true;
+	plugins.dropbar.enable = true;
+	plugins.guess-indent.enable = true;
     };   
+    
     home.packages = [
-	inputs.nix-inspect.packages.x86_64-linux.default
+    	pkgs.nix-inspect
+	pkgs.nerd-fonts.fira-code
+	pkgs.ghc
+	pkgs.haskellPackages.QuickCheck
+	pkgs.libgcc
     ];
 }
