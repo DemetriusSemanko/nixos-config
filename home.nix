@@ -22,18 +22,19 @@
 
 	lsp = {
 	    servers.ruff.enable = true;
+	    servers.rust_analyzer.enable = true;
 	};
 	plugins.lspsaga.enable = true;
 	plugins.web-devicons.enable = true;
 	plugins.dropbar.enable = true;
 	plugins.guess-indent.enable = true;
     };   
+    programs.gcc.enable = true;
     
     home.packages = [
     	pkgs.nix-inspect
 	pkgs.nerd-fonts.fira-code
 	pkgs.ghc
 	pkgs.haskellPackages.QuickCheck
-	pkgs.libgcc
     ];
 }

@@ -89,11 +89,12 @@
     python313
     neovim
     cargo
+    clippy
     gh
     wl-clipboard
     ripgrep
     git-filter-repo
-    python313Packages.numpy
+    rustlings
   ];
 
   # Some programs need SUID wrappers, can be configured further or are
