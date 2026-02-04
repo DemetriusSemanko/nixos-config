@@ -2,13 +2,18 @@
 # your system.  Help is available in the configuration.nix(5) man page
 # and in the NixOS manual (accessible by running ‘nixos-help’).
 
-{ config, pkgs, inputs, ... }:
+{
+  config,
+  pkgs,
+  inputs,
+  ...
+}:
 
 {
-  imports =
-    [ # Include the results of the hardware scan.
-      ./hardware-configuration.nix
-    ];
+  imports = [
+    # Include the results of the hardware scan.
+    ./hardware-configuration.nix
+  ];
 
   # Bootloader.
   boot.loader.systemd-boot.enable = true;
@@ -25,8 +30,11 @@
   networking.networkmanager.enable = true;
 
   # Enabling nix CLI and flakes
-  nix.settings.experimental-features = [ "nix-command" "flakes" ];
-  
+  nix.settings.experimental-features = [
+    "nix-command"
+    "flakes"
+  ];
+
   # Set your time zone.
   time.timeZone = "America/New_York";
 
@@ -53,7 +61,7 @@
   services.xserver.enable = true;
   services.libinput.enable = true;
   services.desktopManager.plasma6.enable = true;
-  
+
   # Bluetooth
   hardware.bluetooth.enable = true;
   services.pulseaudio.enable = false;
@@ -71,8 +79,11 @@
   users.users.demsem = {
     isNormalUser = true;
     description = "Demetrius Semanko";
-    extraGroups = [ "networkmanager" "wheel" ];
-    packages = with pkgs; [];
+    extraGroups = [
+      "networkmanager"
+      "wheel"
+    ];
+    packages = with pkgs; [ ];
   };
 
   # Allow unfree packages
@@ -86,6 +97,7 @@
     vim
     wget
     firefox
+    google-chrome
     python313
     neovim
     cargo
@@ -95,6 +107,9 @@
     ripgrep
     git-filter-repo
     rustlings
+    libreoffice-qt
+    hunspell
+    hunspellDicts.en_US
   ];
 
   # Some programs need SUID wrappers, can be configured further or are
