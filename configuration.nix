@@ -75,6 +75,19 @@
     };
   };
 
+  services.printing.enable = true;
+  # services.printing.stateless is a thing you can do...
+  hardware.printers = {
+    ensurePrinters = [
+      {
+        name = "RamPrint";
+        description = "WCU RamPrint";
+        deviceUri = "https://wcuprintp01.wcupa.net:9164/printers/RamPrint";
+        model = "drv:///sample.drv/generic.ppd";
+      }
+    ];
+  };
+
   # Define a user account. Don't forget to set a password with ‘passwd’.
   users.users.demsem = {
     isNormalUser = true;
@@ -96,8 +109,8 @@
     git
     vim
     wget
-    firefox
     google-chrome
+    firefox
     python313
     neovim
     cargo
@@ -110,6 +123,8 @@
     libreoffice-qt
     hunspell
     hunspellDicts.en_US
+    typst
+    dirb
   ];
 
   # Some programs need SUID wrappers, can be configured further or are

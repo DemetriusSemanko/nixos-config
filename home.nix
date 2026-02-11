@@ -6,6 +6,7 @@
 
   home.stateVersion = "26.05";
 
+
   programs.yazi = {
     enable = true;
     enableBashIntegration = true;
@@ -26,6 +27,7 @@
     lsp = {
       servers.ruff.enable = true;
       servers.rust_analyzer.enable = true;
+      servers.tinymist.enable = true;
     };
     plugins.lspsaga.enable = true;
     plugins.web-devicons.enable = true;
@@ -38,7 +40,30 @@
         nix = [ "nixfmt" ];
         python = [ "ruff_format" ];
         rust = [ "rustfmt" ];
+        typst = [ "typstyle" ];
       };
+    };
+    plugins.cmp = {
+      enable = true;
+      autoEnableSources = true; # Scans the settings.sources array, enabling if available
+      settings = {
+        sources = [
+          { name = "nvim_lsp"; }
+          { name = "path"; }
+          { name = "buffer"; }
+          { name = "spell"; }
+        ];
+
+        mapping = {
+          "<Tab>" = "cmp.mapping.confirm({ select = true })";
+          "<C-k>" = "cmp.mapping(cmp.mapping.select_prev_item(), {'i', 's'})";
+          "<C-j>" = "cmp.mapping(cmp.mapping.select_next_item(), {'i', 's'})";
+        };
+      };
+    };
+    plugins.toggleterm = {
+      enable = true;
+      settings.open_mapping =  "[[<C-\\>]]";
     };
   };
 
