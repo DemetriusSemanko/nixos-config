@@ -85,6 +85,12 @@
         deviceUri = "https://wcuprintp01.wcupa.net:9164/printers/RamPrint";
         model = "drv:///sample.drv/generic.ppd";
       }
+#      {
+#        name = "Brother_Printer";
+#        description = "Home printer";
+#        deviceUri = "https://192.168.1.157";
+#        model = "drv://sample.drv/generic.ppd";
+#      }
     ];
   };
 
