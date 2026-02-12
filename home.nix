@@ -61,6 +61,7 @@
         };
       };
     };
+    plugins.cmp-spell.enable = true;
     plugins.toggleterm = {
       enable = true;
       settings.open_mapping =  "[[<C-\\>]]";
