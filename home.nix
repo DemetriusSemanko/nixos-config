@@ -1,4 +1,9 @@
-{ inputs, pkgs, lib, ... }:
+{
+  inputs,
+  pkgs,
+  lib,
+  ...
+}:
 {
   imports = [
     inputs.nixvim.homeModules.nixvim
@@ -175,10 +180,18 @@
             "google".metaData.alias = "@g";
             "wikipedia".metaData.alias = "@w";
             "ddg".metaData.alias = "@ddg";
-          };
-      };
-    };
-  };
+          }; # end of let-in for search
+      }; # programs.firefox.profiles.default.search
+    }; # programs.firefox.profiles.default
+    policies = {
+      ExtensionSettings = {
+        "uBlock0@raymondhill.net" = {
+          install_url = "https://addons.mozilla.org/firefox/downloads/latest/uBlock0@raymondhill.net/latest.xpi";
+          installation_mode = "force_installed";
+        }; # uBlock settings
+      }; #programs.firefox.policies.ExtensionSettings
+    }; # programs.firefox.policies
+  }; # programs.firefox
 
   # Neovim config with nixvim
   programs.nixvim = {
@@ -250,6 +263,17 @@
       settings.open_mapping = "[[<C-\\>]]";
     };
   };
+  # VCS
+  programs.jujutsu = {
+    enable = true;
+    settings = {
+      user = {
+        name = "Demetrius Semanko";
+        email = "143662059+DemetriusSemanko@users.noreply.github.com";
+      };
+    };
+  };
+  programs.git.enable = true;
 
   # Compilers, whatever
   programs.gcc.enable = true;
