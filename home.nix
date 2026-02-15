@@ -11,11 +11,12 @@
 
   home.stateVersion = "26.05";
 
+  programs.bash.enable = true;
+
   programs.yazi = {
     enable = true;
     enableBashIntegration = true;
   };
-  programs.bash.enable = true;
 
   programs.firefox = {
     enable = true;
