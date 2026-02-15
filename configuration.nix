@@ -112,7 +112,6 @@
   # $ nix search wget
   environment.systemPackages = with pkgs; [
     just
-    git
     vim
     wget
     google-chrome
