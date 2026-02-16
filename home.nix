@@ -280,6 +280,15 @@
   programs.gcc.enable = true;
   programs.java.enable = true;
 
+  # Nix-specific
+  programs.nh = {
+    enable = true;
+    clean = {
+      enable = true;
+      dates = "weekly";
+    }; # programs.nh.clean
+  }; # programs.nh
+
   home.packages = [
     pkgs.nix-inspect
     pkgs.nerd-fonts.fira-code
