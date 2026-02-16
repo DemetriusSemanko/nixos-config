@@ -17,3 +17,7 @@ test:
 # Updates flake.lock file
 update:
     nix flake update
+
+# Collects garbage using nh
+gc:
+    nh clean all --keep 10 --ask
