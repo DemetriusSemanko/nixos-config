@@ -292,6 +292,7 @@
   home.packages = [
     pkgs.nix-inspect
     pkgs.nerd-fonts.fira-code
+    pkgs.newcomputermodern
     pkgs.ghc
     pkgs.haskellPackages.QuickCheck
   ];
