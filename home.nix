@@ -284,6 +284,7 @@
       };
       ui = {
         default-command = ["log" "--reversed" "-r" "all()"];
+        editor = "nvim";
       };
     };
   };
