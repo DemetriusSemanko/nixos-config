@@ -61,7 +61,7 @@
   services.xserver.enable = true;
   services.libinput.enable = true;
   services.desktopManager.plasma6.enable = true;
-
+  
   # Bluetooth
   hardware.bluetooth.enable = true;
   services.pulseaudio.enable = false;
@@ -75,8 +75,18 @@
     };
   };
 
-  services.printing.enable = true;
-  services.printing.stateless = true;
+  services.printing = {
+    enable = true;
+    stateless = true;
+    #    drivers = (
+    #      pkgs.linkFarm "drivers" [
+    #        {
+    #          name = "share/cups/model/Brother_Printer.ppd";
+    #          path = ./res/Brother_Printer.ppd;
+    #        }
+    #      ]
+    #    );
+  };
   hardware.printers = {
     ensurePrinters = [
       {
@@ -85,12 +95,13 @@
         deviceUri = "https://wcuprintp01.wcupa.net:9164/printers/RamPrint";
         model = "drv:///sample.drv/generic.ppd";
       }
-      {
-        name = "Brother_Printer";
-        description = "Home printer";
-        deviceUri = "ipp://BRW485F9972E7C7";
-        model = "everywhere";
-      }
+      #      {
+      #       name = "Brother_Printer";
+      #      description = "B&W Printer-Scanner";
+      #     location = "The Room";
+      #    deviceUri = "ipp://BRW485F9972E7C7.local:632/ipp/print";
+      #   model = "Brother_Printer.ppd";
+      #}
     ];
   };
 

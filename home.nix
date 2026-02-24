@@ -11,12 +11,16 @@
 
   home.stateVersion = "26.05";
 
+  programs.plasma = {
+    enable = true;
+  };
+
   programs.bash.enable = true;
 
   programs.yazi = {
     enable = true;
-    enableBashIntegration = true;
-  };
+    enableBashIntegration = true; # Use 'y' in bash!
+  }; # programs.yazi
 
   programs.firefox = {
     enable = true;
@@ -190,7 +194,11 @@
           install_url = "https://addons.mozilla.org/firefox/downloads/latest/uBlock0@raymondhill.net/latest.xpi";
           installation_mode = "force_installed";
         }; # uBlock settings
-      }; #programs.firefox.policies.ExtensionSettings
+        "{a9c2ad37-e940-4892-8dce-cd73c6cbbc0c}" = {
+          install_url = "https://addons.mozilla.org/firefox/downloads/latest/{a9c2ad37-e940-4892-8dce-cd73c6cbbc0c}/latest.xpi";
+          installation_mode = "force_installed";
+        }; # Feedbro settings
+      }; # programs.firefox.policies.ExtensionSettings
     }; # programs.firefox.policies
   }; # programs.firefox
 
@@ -226,6 +234,8 @@
         typst = [ "typstyle" ];
         html = [ "prettier" ];
         lua = [ "stylua" ];
+        css = [ "prettier" ];
+        java = [ "google-java-format" ];
       };
       luaConfig.post = ''
         vim.api.nvim_create_user_command("Format", function(args)
@@ -271,6 +281,9 @@
       user = {
         name = "Demetrius Semanko";
         email = "143662059+DemetriusSemanko@users.noreply.github.com";
+      };
+      ui = {
+        default-command = ["log" "--reversed" "-r" "all()"];
       };
     };
   };
