@@ -289,7 +289,7 @@
           "log"
           "--reversed"
           "-r"
-          "all()"
+          "ancestors(@, 10)"
         ];
         editor = "nvim";
       };
