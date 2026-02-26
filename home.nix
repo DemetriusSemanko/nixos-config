@@ -24,6 +24,7 @@
 
   programs.firefox = {
     enable = true;
+
     profiles.default = {
       search = {
         force = true;
@@ -53,6 +54,7 @@
               mkEngineForceFavicon [ "@gh" "@github" ]
                 "https://github.com/search?type=repositories&q={searchTerms}"
                 "https://github.githubassets.com/favicons/favicon-dark.svg";
+
             "SourceGraph" = mkEngine [
               "@sg"
               "@sourcegraph"
@@ -283,7 +285,12 @@
         email = "143662059+DemetriusSemanko@users.noreply.github.com";
       };
       ui = {
-        default-command = ["log" "--reversed" "-r" "all()"];
+        default-command = [
+          "log"
+          "--reversed"
+          "-r"
+          "all()"
+        ];
         editor = "nvim";
       };
     };

@@ -61,7 +61,7 @@
   services.xserver.enable = true;
   services.libinput.enable = true;
   services.desktopManager.plasma6.enable = true;
-  
+   
   # Bluetooth
   hardware.bluetooth.enable = true;
   services.pulseaudio.enable = false;
