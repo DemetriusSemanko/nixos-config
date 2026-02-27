@@ -221,6 +221,7 @@
       servers.tinymist.enable = true;
       servers.html.enable = true;
       servers.typos_lsp.enable = true;
+      servers.emmet_language_server.enable = true;
     };
     plugins.lspsaga.enable = true;
     plugins.web-devicons.enable = true;
