@@ -61,7 +61,7 @@
   services.xserver.enable = true;
   services.libinput.enable = true;
   services.desktopManager.plasma6.enable = true;
-   
+
   # Bluetooth
   hardware.bluetooth.enable = true;
   services.pulseaudio.enable = false;
@@ -139,10 +139,8 @@
     hunspell
     hunspellDicts.en_US
     typst
-    dirb
+    wireshark
   ];
-
-  programs.wireshark.enable = true;
 
   # Some programs need SUID wrappers, can be configured further or are
   # started in user sessions.
