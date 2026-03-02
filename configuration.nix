@@ -123,7 +123,6 @@
   # $ nix search wget
   environment.systemPackages = with pkgs; [
     just
-    vim # TODO: Remove from configuration.nix
     wget
     google-chrome
     python313
@@ -132,7 +131,6 @@
     clippy
     gh # TODO: Move to HM
     wl-clipboard
-    ripgrep # TODO: Move to HM
     rustlings
     libreoffice-qt
     hunspell

@@ -22,7 +22,7 @@
     enable = true;
     enableBashIntegration = true; # Use 'y' in bash!
   }; # programs.yazi
-  # programs.ripgrep.enable = true;
+  programs.ripgrep.enable = true;
 
   programs.firefox = {
     enable = true;
