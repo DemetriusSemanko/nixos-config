@@ -123,7 +123,7 @@
   # $ nix search wget
   environment.systemPackages = with pkgs; [
     just
-    vim # TODO: Move to HM
+    vim # TODO: Remove from configuration.nix
     wget
     google-chrome
     python313

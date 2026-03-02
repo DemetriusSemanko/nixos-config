@@ -16,11 +16,13 @@
   };
 
   programs.bash.enable = true;
-
+  
+  # Terminal tools
   programs.yazi = {
     enable = true;
     enableBashIntegration = true; # Use 'y' in bash!
   }; # programs.yazi
+  # programs.ripgrep.enable = true;
 
   programs.firefox = {
     enable = true;
@@ -204,6 +206,11 @@
     }; # programs.firefox.policies
   }; # programs.firefox
 
+  # Neovim
+  /*
+  programs.nvim.enable = true;
+  */
+
   # Neovim config with nixvim
   programs.nixvim = {
     enable = true;
@@ -277,6 +284,7 @@
       settings.open_mapping = "[[<C-\\>]]";
     };
   };
+
   # VCS
   programs.jujutsu = {
     enable = true;
@@ -297,10 +305,17 @@
     };
   };
   programs.git.enable = true;
+  /*
+    programs.gh = {
+      enable = true;
+      git_protocol = "https";
+    };
+  */
 
   # Compilers, whatever
   programs.gcc.enable = true;
   programs.java.enable = true;
+  # programs.cargo.enable = true;
 
   # Nix-specific
   programs.nh = {
