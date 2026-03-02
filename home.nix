@@ -207,9 +207,7 @@
   }; # programs.firefox
 
   # Neovim
-  /*
-  programs.nvim.enable = true;
-  */
+  programs.neovim.enable = true;
 
   # Neovim config with nixvim
   programs.nixvim = {

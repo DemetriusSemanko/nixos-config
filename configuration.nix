@@ -126,7 +126,6 @@
     wget
     google-chrome
     python313
-    neovim # TODO: Move to HM
     cargo # TODO: Move to HM
     clippy
     gh # TODO: Move to HM
