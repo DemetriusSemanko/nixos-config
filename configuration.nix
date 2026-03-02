@@ -123,17 +123,16 @@
   # $ nix search wget
   environment.systemPackages = with pkgs; [
     just
-    vim
+    vim # TODO: Move to HM
     wget
     google-chrome
     python313
-    neovim
-    cargo
+    neovim # TODO: Move to HM
+    cargo # TODO: Move to HM
     clippy
-    gh
+    gh # TODO: Move to HM
     wl-clipboard
-    ripgrep
-    git-filter-repo
+    ripgrep # TODO: Move to HM
     rustlings
     libreoffice-qt
     hunspell
