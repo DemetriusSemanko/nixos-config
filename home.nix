@@ -212,7 +212,11 @@
   # Neovim config with nixvim
   programs.nixvim = {
     enable = true;
+    defaultEditor = true;
+    viAlias = true;
+    vimAlias = true;
     colorschemes.catppuccin.enable = true;
+    colorschemes.catppuccin.autoLoad = true;
     plugins.lspconfig.enable = true;
     plugins.treesitter = {
       enable = true;
