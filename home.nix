@@ -205,10 +205,7 @@
       }; # programs.firefox.policies.ExtensionSettings
     }; # programs.firefox.policies
   }; # programs.firefox
-  /*
-  # Neovim
-  programs.neovim.enable = true;
-  */
+
   # Neovim config with nixvim
   programs.nixvim = {
     enable = true;
