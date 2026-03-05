@@ -301,6 +301,13 @@
         ];
         editor = "nvim";
       };
+      aliases = {
+        "bm" = [
+          "bookmark"
+          "move"
+          "--to"
+        ];
+      };
     };
   };
   programs.git.enable = true;
