@@ -127,7 +127,6 @@
     google-chrome
     python313
     clippy
-    gh # TODO: Move to HM
     wl-clipboard
     rustlings
     libreoffice-qt

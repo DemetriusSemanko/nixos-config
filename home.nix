@@ -16,7 +16,7 @@
   };
 
   programs.bash.enable = true;
-  
+
   # Terminal tools
   programs.yazi = {
     enable = true;
@@ -304,12 +304,17 @@
     };
   };
   programs.git.enable = true;
-  /*
-    programs.gh = {
-      enable = true;
+  programs.gh = {
+    enable = true;
+    settings = {
       git_protocol = "https";
     };
-  */
+    hosts = {
+      "github.com" = {
+        user = "DemetriusSemanko";
+      };
+    };
+  };
 
   # Compilers, whatever
   programs.gcc.enable = true;
