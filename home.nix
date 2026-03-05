@@ -314,7 +314,7 @@
   # Compilers, whatever
   programs.gcc.enable = true;
   programs.java.enable = true;
-  # programs.cargo.enable = true;
+  programs.cargo.enable = true;
 
   # Nix-specific
   programs.nh = {
