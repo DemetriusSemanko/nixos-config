@@ -302,7 +302,7 @@
         editor = "nvim";
       };
       aliases = {
-        "bm" = [
+        "bmt" = [
           "bookmark"
           "move"
           "--to"
