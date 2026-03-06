@@ -314,7 +314,7 @@
   programs.gh = {
     enable = true;
     settings = {
-      git_protocol = "https";
+      git_protocol = "ssh";
     };
     hosts = {
       "github.com" = {
