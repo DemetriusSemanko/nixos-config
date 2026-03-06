@@ -327,6 +327,7 @@
   programs.gcc.enable = true;
   programs.java.enable = true;
   programs.cargo.enable = true;
+  programs.npm.enable = true;
 
   # Nix-specific
   programs.nh = {

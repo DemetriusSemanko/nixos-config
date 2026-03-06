@@ -134,6 +134,7 @@
     hunspellDicts.en_US
     typst
     wireshark
+    john
   ];
 
   # Some programs need SUID wrappers, can be configured further or are
