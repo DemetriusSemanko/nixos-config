@@ -290,7 +290,7 @@
     settings = {
       user = {
         name = "Demetrius Semanko";
-        email = "143662059+DemetriusSemanko@users.noreply.github.com";
+        email = "demetrius@demsem.dev";
       };
       ui = {
         default-command = [
