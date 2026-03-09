@@ -135,6 +135,7 @@
     typst
     wireshark
     john
+    ruby
   ];
 
   # Some programs need SUID wrappers, can be configured further or are
