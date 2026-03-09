@@ -242,6 +242,7 @@
         rust = [ "rustfmt" ];
         typst = [ "typstyle" ];
         html = [ "prettier" ];
+        typescriptreact = [ "oxfmt" ];
         lua = [ "stylua" ];
         css = [ "prettier" ];
         java = [ "google-java-format" ];
