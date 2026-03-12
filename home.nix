@@ -222,12 +222,12 @@
       };
     };
     lsp = {
-      servers.ruff.enable = true;
-      servers.rust_analyzer.enable = true;
-      servers.tinymist.enable = true;
+      servers.ruff.enable = true; # Python
+      servers.rust_analyzer.enable = true; # Rust
+      servers.tinymist.enable = true; # Typst
       servers.html.enable = true;
-      servers.typos_lsp.enable = true;
-      servers.emmet_language_server.enable = true;
+      servers.typos_lsp.enable = true; # Language typos
+      servers.emmet_language_server.enable = true; # Emmet
     };
     plugins.lspsaga.enable = true;
     plugins.web-devicons.enable = true;
@@ -310,7 +310,9 @@
       };
     };
   };
+  # Git
   programs.git.enable = true;
+  # GitHub
   programs.gh = {
     enable = true;
     settings = {
