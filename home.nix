@@ -224,7 +224,7 @@
     lsp = {
       servers.ruff.enable = true; # Python
       servers.rust_analyzer.enable = true; # Rust
-      servers.tinymist.enable = true; # Typst
+      servers.tinymist.enable = true;
       servers.html.enable = true;
       servers.typos_lsp.enable = true; # Language typos
       servers.emmet_language_server.enable = true; # Emmet
