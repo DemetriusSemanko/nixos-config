@@ -1,22 +1,18 @@
 # https://just.systems
-default:
+_default:
     just -l
 
-# Switches system to whatever was built
+# Switches system to whatever was built (using `nh`)
 switch:
-    sudo nixos-rebuild switch --flake .#delphi
+    nh os switch -k .#delphi
 
-# Builds but doesn't switch
+# Builds but doesn't switch (using `nh`)
 build:
-    sudo nixos-rebuild build --flake .#delphi
-
-# Creates test generation
-test:
-    sudo nixos-rebuild switch -p test --flake .#delphi
+    nh os build -k .#delphi
 
 # Updates flake.lock file
 update:
-    nix flake update
+    nh os build -k --update .#delphi
 
 # Collects garbage using nh
 gc:
