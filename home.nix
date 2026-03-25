@@ -51,6 +51,10 @@
               aliases: type: mkEngine aliases "https://modrinth.com/discover/${type}?q={searchTerms}" "ico";
           in
           {
+            # Degoog Engine
+            "degoog" = mkEngineForceFavicon [ "@dg" "@degoog" ] 
+              "http://localhost:4444/search?q={searchTerms}" 
+              "http://localhost:4444/public/favicon/favicon.ico?v=0.9.0";
             # Dev
             "GitHub Repos" =
               mkEngineForceFavicon [ "@gh" "@github" ]
@@ -203,6 +207,9 @@
           installation_mode = "force_installed";
         }; # Feedbro settings
       }; # programs.firefox.policies.ExtensionSettings
+      SearchEngines = {
+        Default = "@dg";
+      };
     }; # programs.firefox.policies
   }; # programs.firefox
 

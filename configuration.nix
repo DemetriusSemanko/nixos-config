@@ -15,6 +15,25 @@
     ./hardware-configuration.nix
   ];
 
+  # Docker
+  virtualisation = {
+    docker = {
+      enable = true;
+    };
+    oci-containers = {
+      backend = "docker";
+      containers = {
+        degoog = {
+          # degoog
+          image = "ghcr.io/fccview/degoog:latest";
+          volumes = [ "./data:/app/data" ];
+          user = "1000:1000";
+          ports = [ "4444:4444" ];
+        };
+      };
+    };
+  };
+
   # Bootloader.
   boot.loader.systemd-boot.enable = true;
   boot.loader.efi.canTouchEfiVariables = true;
@@ -112,6 +131,7 @@
     extraGroups = [
       "networkmanager"
       "wheel"
+      "docker"
     ];
     packages = with pkgs; [ ];
   };
@@ -133,8 +153,6 @@
     hunspell
     hunspellDicts.en_US
     typst
-    wireshark
-    john
   ];
 
   # Some programs need SUID wrappers, can be configured further or are
