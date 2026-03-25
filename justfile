@@ -10,7 +10,7 @@ switch:
 build:
     nh os build -k .#delphi
 
-# Updates flake.lock file
+# Updates flake.lock file (using `nh`)
 update:
     nh os build -k --update .#delphi
 
