@@ -26,7 +26,7 @@
         degoog = {
           # degoog
           image = "ghcr.io/fccview/degoog:latest";
-          volumes = [ "./data:/app/data" ];
+          # volumes = [ "~/degoog/data:/app/data" ];
           user = "1000:1000";
           ports = [ "4444:4444" ];
         };
