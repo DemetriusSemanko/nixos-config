@@ -30,6 +30,8 @@
     profiles.default = {
       search = {
         force = true;
+        default = "degoog";
+        privateDefault = "degoog";
         engines =
           let
             mkEngineForceFavicon = aliases: queryUrl: iconUrl: {
@@ -52,9 +54,20 @@
           in
           {
             # Degoog Engine
-            "degoog" = mkEngineForceFavicon [ "@dg" "@degoog" ] 
-              "http://localhost:4444/search?q={searchTerms}" 
-              "http://localhost:4444/public/favicon/favicon.ico?v=0.9.0";
+            /*
+            "degoog" = mkEngineForceFavicon [
+              "@deg"
+              "@degoog"
+            ] "http://localhost:4444/search?q={searchTerms}" "http://localhost:4444/public/favicon/favicon.ico";
+            */
+
+            degoog = {
+              name = "degoog";
+              urls = [ { template = "http://localhost:4444/search?q={searchTerms}"; } ];
+              icon = "http://localhost:4444/public/favicon/favicon.ico";
+              definedAliases = [ "@dg" "@deg" "@degoog"];
+            };
+
             # Dev
             "GitHub Repos" =
               mkEngineForceFavicon [ "@gh" "@github" ]
@@ -207,9 +220,6 @@
           installation_mode = "force_installed";
         }; # Feedbro settings
       }; # programs.firefox.policies.ExtensionSettings
-      SearchEngines = {
-        Default = "@dg";
-      };
     }; # programs.firefox.policies
   }; # programs.firefox
 
