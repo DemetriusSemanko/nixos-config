@@ -30,8 +30,8 @@
     profiles.default = {
       search = {
         force = true;
-        default = "degoog";
-        privateDefault = "degoog";
+        default = "searxng";
+        privateDefault = "searxng";
         engines =
           let
             mkEngineForceFavicon = aliases: queryUrl: iconUrl: {
@@ -54,20 +54,28 @@
           in
           {
             # Degoog Engine
-            /*
-            "degoog" = mkEngineForceFavicon [
-              "@deg"
-              "@degoog"
-            ] "http://localhost:4444/search?q={searchTerms}" "http://localhost:4444/public/favicon/favicon.ico";
-            */
+            "degoog" =
+              (mkEngineForceFavicon [
+                "@deg"
+                "@degoog"
+              ] "http://localhost:4444/search?q={searchTerms}" "http://localhost:4444/public/favicon/favicon.ico")
+              // {
+                name = "degoog";
+              };
 
-            degoog = {
-              name = "degoog";
-              urls = [ { template = "http://localhost:4444/search?q={searchTerms}"; } ];
-              icon = "http://localhost:4444/public/favicon/favicon.ico";
-              definedAliases = [ "@dg" "@deg" "@degoog"];
-            };
-
+            "searxng" =
+              (mkEngineForceFavicon
+                [
+                  "@sx"
+                  "@sxng"
+                  "@sear"
+                ]
+                "http://localhost:8888/search?q={searchTerms}"
+                "http://localhost:8888/static/themes/simple/img/favicon.png"
+              )
+              // {
+                name = "searxng";
+              };
             # Dev
             "GitHub Repos" =
               mkEngineForceFavicon [ "@gh" "@github" ]

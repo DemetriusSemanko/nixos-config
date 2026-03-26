@@ -24,11 +24,12 @@
       backend = "docker";
       containers = {
         degoog = {
-          # degoog
           image = "ghcr.io/fccview/degoog:latest";
-          # volumes = [ "~/degoog/data:/app/data" ];
-          user = "1000:1000";
           ports = [ "4444:4444" ];
+        };
+        searxng = {
+          image = "ghcr.io/searxng/searxng:latest";
+          ports = [ "8888:8080" ];
         };
       };
     };
