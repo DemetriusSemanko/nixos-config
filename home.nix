@@ -7,6 +7,7 @@
 {
   imports = [
     inputs.nixvim.homeModules.nixvim
+    ./homeManagerModules
   ];
 
   home.stateVersion = "26.05";
@@ -16,17 +17,10 @@
   };
 
   programs.bash.enable = true;
-
-  # Terminal tools
-  programs.yazi = {
-    enable = true;
-    enableBashIntegration = true; # Use 'y' in bash!
-  }; # programs.yazi
   programs.ripgrep.enable = true;
 
   programs.firefox = {
     enable = true;
-
     profiles.default = {
       search = {
         force = true;
@@ -310,31 +304,6 @@
     };
   };
 
-  # VCS
-  programs.jujutsu = {
-    enable = true;
-    settings = {
-      user = {
-        name = "Demetrius Semanko";
-        email = "demetrius@demsem.dev";
-      };
-      ui = {
-        default-command = [
-          "log"
-          "--reversed"
-          "-r"
-          "ancestors(@, 10)"
-        ];
-        editor = "nvim";
-      };
-      aliases = {
-        "dm" = [
-          "desc"
-          "-m"
-        ];
-      };
-    };
-  };
   # Git
   programs.git.enable = true;
   # GitHub

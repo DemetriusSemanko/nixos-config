@@ -30,11 +30,13 @@
           ./configuration.nix
           home-manager.nixosModules.home-manager
           {
-            home-manager.useGlobalPkgs = true;
-            home-manager.useUserPackages = true;
-            home-manager.sharedModules = [ plasma-manager.homeModules.plasma-manager ];
-            home-manager.users.demsem = ./home.nix;
-            home-manager.extraSpecialArgs = { inherit inputs; };
+            home-manager = {
+              useGlobalPkgs = true;
+              useUserPackages = true;
+              sharedModules = [ plasma-manager.homeModules.plasma-manager ];
+              users.demsem = ./home.nix;
+              extraSpecialArgs = { inherit inputs; };
+            };
           }
         ];
       };
