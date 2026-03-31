@@ -1,6 +1,7 @@
 { ... }:
 {
   imports = [
+    ./development
     ./internet
     ./nvim
     ./terminal
