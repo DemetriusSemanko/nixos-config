@@ -1,4 +1,8 @@
 { ... }:
 {
-  imports = [ ./yazi.nix ];
+  imports = [
+    ./bash.nix
+    ./ripgrep.nix
+    ./yazi.nix
+  ];
 }
