@@ -28,7 +28,7 @@
           ports = [ "4444:4444" ];
         };
         searxng = {
-          image = "ghcr.io/searxng/searxng:latest";
+          image = "ghcr.io/searxng/searxng:2026.3.28-cf5389afd";
           ports = [ "8888:8080" ];
         };
       };

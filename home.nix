@@ -231,6 +231,7 @@
   # neovim folder
   # nixvim file
   # other files
+  /*
   programs.nixvim = {
     enable = true;
     defaultEditor = true;
@@ -308,6 +309,7 @@
       settings.open_mapping = "[[<C-\\>]]";
     };
   };
+  */
 
   # Compilers, whatever
   # dev tools?
