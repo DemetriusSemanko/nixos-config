@@ -1,7 +1,9 @@
 { ... }:
 {
   imports = [
+    ./internet
+    ./nvim
+    ./terminal
     ./vcs
-    ./terminalTools
   ];
 }

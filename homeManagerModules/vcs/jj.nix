@@ -1,4 +1,4 @@
-{ pkgs, ... }:
+{ ... }:
 {
   programs.jujutsu = {
     enable = true;
@@ -12,7 +12,7 @@
           "log"
           "--reversed"
           "-r"
-          "ancestors(@, 3)"
+          "ancestors(@, 5)"
         ];
         editor = "nvim";
       };

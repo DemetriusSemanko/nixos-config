@@ -1,4 +1,8 @@
 { ... }:
 {
-  imports = [ ./jj.nix ];
+  imports = [
+    ./gh.nix
+    ./git.nix
+    ./jj.nix 
+  ];
 }
