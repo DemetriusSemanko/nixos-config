@@ -1,4 +1,3 @@
-{ ... }:
 {
   programs.npm.enable = true;
 }
