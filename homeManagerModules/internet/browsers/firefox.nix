@@ -5,8 +5,8 @@
     profiles.default = {
       search = {
         force = true;
-        default = "searxng";
-        privateDefault = "searxng";
+        default = "google";
+        privateDefault = "google";
         engines =
           let
             mkEngineForceFavicon = aliases: queryUrl: iconUrl: {
@@ -193,6 +193,11 @@
       }; # programs.firefox.profiles.default.search
     }; # programs.firefox.profiles.default
     policies = {
+      AppAutoUpdate = false;
+      Cookies = {
+        "Behavior" = "allow";
+      };
+      DontCheckDefaultBrowser = true;
       ExtensionSettings = {
         "uBlock0@raymondhill.net" = {
           install_url = "https://addons.mozilla.org/firefox/downloads/latest/uBlock0@raymondhill.net/latest.xpi";
@@ -203,6 +208,10 @@
           installation_mode = "force_installed";
         }; # Feedbro settings
       }; # programs.firefox.policies.ExtensionSettings
+      OfferToSaveLogins = false;
+      Preferences = {
+        "network.protocol-handler.external.mailto" = false;
+      };
     }; # programs.firefox.policies
   }; # programs.firefox
 }
