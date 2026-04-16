@@ -19,5 +19,6 @@
     pkgs.nix-inspect
     pkgs.ghc
     pkgs.haskellPackages.QuickCheck
+    pkgs.signal-desktop
   ];
 }
