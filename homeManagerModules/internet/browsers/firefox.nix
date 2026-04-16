@@ -194,9 +194,6 @@
     }; # programs.firefox.profiles.default
     policies = {
       AppAutoUpdate = false;
-      Cookies = {
-        "Behavior" = "allow";
-      };
       DontCheckDefaultBrowser = true;
       ExtensionSettings = {
         "uBlock0@raymondhill.net" = {
