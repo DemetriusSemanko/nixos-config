@@ -17,5 +17,6 @@
 
   home.packages = [
     pkgs.signal-desktop
+    pkgs.tinymist
   ];
 }
