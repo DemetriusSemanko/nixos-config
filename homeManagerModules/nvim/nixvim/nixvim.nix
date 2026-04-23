@@ -38,6 +38,8 @@
         lua = [ "stylua" ];
         css = [ "prettier" ];
         java = [ "google-java-format" ];
+        astro = [ "deno_fmt" ];
+        markdown = [ "deno_fmt" ];
       };
       luaConfig.post = ''
         vim.api.nvim_create_user_command("Format", function(args)
