@@ -16,7 +16,6 @@
   };
 
   home.packages = [
-    pkgs.ghc
     pkgs.signal-desktop
   ];
 }
