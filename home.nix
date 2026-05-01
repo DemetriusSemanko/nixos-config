@@ -15,6 +15,8 @@
     enable = true;
   };
 
+  programs.obs-studio.enable = true;
+
   home.packages = [
     pkgs.signal-desktop
     pkgs.tinymist
