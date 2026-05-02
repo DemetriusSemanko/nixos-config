@@ -20,19 +20,19 @@
     docker = {
       enable = true;
     };
-    oci-containers = {
-      backend = "docker";
-      containers = {
-        degoog = {
-          image = "ghcr.io/fccview/degoog:latest";
-          ports = [ "4444:4444" ];
-        };
-        searxng = {
-          image = "ghcr.io/searxng/searxng:latest";
-          ports = [ "8888:8080" ];
-        };
-      };
-    };
+    # oci-containers = {
+    #   backend = "docker";
+    #   containers = {
+    #     degoog = {
+    #       image = "ghcr.io/fccview/degoog:latest";
+    #       ports = [ "4444:4444" ];
+    #     };
+    #     searxng = {
+    #       image = "ghcr.io/searxng/searxng:latest";
+    #       ports = [ "8888:8080" ];
+    #     };
+    #   };
+    # };
   };
 
   # Bootloader.
