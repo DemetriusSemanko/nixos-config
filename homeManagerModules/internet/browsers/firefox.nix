@@ -29,28 +29,28 @@
           in
           {
             # Degoog Engine
-            "degoog" =
-              (mkEngineForceFavicon [
-                "@deg"
-                "@degoog"
-              ] "http://localhost:4444/search?q={searchTerms}" "http://localhost:4444/public/favicon/favicon.ico")
-              // {
-                name = "degoog";
-              };
+            # "degoog" =
+            #   (mkEngineForceFavicon [
+            #     "@deg"
+            #     "@degoog"
+            #   ] "http://localhost:4444/search?q={searchTerms}" "http://localhost:4444/public/favicon/favicon.ico")
+            #   // {
+            #     name = "degoog";
+            #   };
 
-            "searxng" =
-              (mkEngineForceFavicon
-                [
-                  "@sx"
-                  "@sxng"
-                  "@sear"
-                ]
-                "http://localhost:8888/search?q={searchTerms}"
-                "http://localhost:8888/static/themes/simple/img/favicon.png"
-              )
-              // {
-                name = "searxng";
-              };
+            # "searxng" =
+            #   (mkEngineForceFavicon
+            #     [
+            #       "@sx"
+            #       "@sxng"
+            #       "@sear"
+            #     ]
+            #     "http://localhost:8888/search?q={searchTerms}"
+            #     "http://localhost:8888/static/themes/simple/img/favicon.png"
+            #   )
+            #   // {
+            #     name = "searxng";
+            #   };
             # Dev
             "GitHub Repos" =
               mkEngineForceFavicon [ "@gh" "@github" ]
