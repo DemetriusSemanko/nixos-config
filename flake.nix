@@ -8,11 +8,6 @@
       url = "github:nix-community/home-manager";
       inputs.nixpkgs.follows = "nixpkgs";
     };
-    plasma-manager = {
-      url = "github:nix-community/plasma-manager";
-      inputs.nixpkgs.follows = "nixpkgs";
-      inputs.home-manager.follows = "home-manager";
-    };
   };
 
   outputs =
@@ -21,7 +16,6 @@
       nixpkgs,
       nixvim,
       home-manager,
-      plasma-manager,
       ...
     }@inputs:
     {
@@ -33,7 +27,6 @@
             home-manager = {
               useGlobalPkgs = true;
               useUserPackages = true;
-              sharedModules = [ plasma-manager.homeModules.plasma-manager ];
               users.demsem = ./home.nix;
               extraSpecialArgs = { inherit inputs; };
             };

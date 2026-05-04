@@ -1,6 +1,8 @@
+{ pkgs, ... }:
 {
   programs.nixvim = {
     enable = true;
+    nixpkgs.pkgs = pkgs;
     defaultEditor = true;
     viAlias = true;
     vimAlias = true;
@@ -78,5 +80,4 @@
       settings.open_mapping = "[[<C-\\>]]";
     };
   };
-
 }
