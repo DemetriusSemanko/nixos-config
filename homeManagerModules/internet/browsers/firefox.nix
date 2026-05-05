@@ -2,6 +2,7 @@
 {
   programs.firefox = {
     enable = true;
+    configPath = ".mozilla/firefox";
     profiles.default = {
       search = {
         force = true;
