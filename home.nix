@@ -13,8 +13,9 @@
 
   programs.obs-studio.enable = true;
 
-  home.packages = [
-    pkgs.signal-desktop
-    pkgs.tinymist
+  home.packages = with pkgs; [
+    signal-desktop
+    tinymist
+    rustc
   ];
 }
