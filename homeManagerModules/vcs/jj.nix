@@ -16,13 +16,31 @@
         editor = "nvim";
       };
       aliases = {
-        "dm" = [
+        "d" = [
           "desc"
           "-m"
         ];
         "files" = [
           "file"
           "list"
+        ];
+        "nd" = [
+          "new"
+          "-m"
+        ];
+        "n" = [ "new" ];
+        "push" = [
+          "git"
+          "push"
+        ];
+        "pull" = [
+          "git"
+          "fetch"
+        ];
+        "bsm" = [
+          "bookmark"
+          "set"
+          "main"
         ];
       };
     };
