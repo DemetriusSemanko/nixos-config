@@ -4,5 +4,6 @@
     ./java.nix
     ./npm.nix
     ./rust.nix
+    ./uv.nix
   ];
 }
