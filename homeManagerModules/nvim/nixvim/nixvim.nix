@@ -16,7 +16,8 @@
       };
     };
     lsp = {
-      servers.ruff.enable = true; # Python
+      servers.ruff.enable = true; # Python, linting and formatting
+      servers.ty.enable = true; # Python, type checking
       servers.rust_analyzer.enable = true; # Rust
       servers.tinymist.enable = true;
       servers.html.enable = true;
