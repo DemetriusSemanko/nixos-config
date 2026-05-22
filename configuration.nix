@@ -15,6 +15,11 @@
     ./hardware-configuration.nix
   ];
 
+  services.dbus.packages = [ pkgs.gcr ];
+  programs.gnupg.agent = {
+    enable = true;
+  };
+
   # Docker
   virtualisation = {
     docker = {
@@ -156,6 +161,8 @@
     typst
     nerd-fonts.fira-code
     newcomputermodern
+    gnupg
+    pinentry-curses
   ];
 
   # Some programs need SUID wrappers, can be configured further or are
