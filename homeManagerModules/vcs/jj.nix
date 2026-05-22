@@ -2,6 +2,10 @@
   programs.jujutsu = {
     enable = true;
     settings = {
+      signing = {
+        behavior = "own";
+        backend = "gpg";
+      };
       user = {
         name = "Demetrius Semanko";
         email = "demetrius@demsem.dev";
