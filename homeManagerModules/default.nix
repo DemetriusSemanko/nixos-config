@@ -3,6 +3,7 @@
     ./development
     ./internet
     ./nvim
+    ./support
     ./terminal
     ./vcs
   ];
