@@ -2,7 +2,7 @@ This post worked to set up GPG on my machine.
 
 1. Empty .gnupg/gpg-agent.conf file.
 
-2. Added to nixos config file:
+2. Added to nixos config file (`configuration.nix`):
 
 services.dbus.packages = [pkgs.gcr];
 programs.gnupg.agent = {
@@ -15,4 +15,6 @@ programs.gnupg.agent = {
 
 5. systemctl --user restart gpg-agent
 
-https://discourse.nixos.org/t/cant-get-gnupg-to-work-no-pinentry/15373/36
+6. Et voila!
+
+Source: https://discourse.nixos.org/t/cant-get-gnupg-to-work-no-pinentry/15373/36
