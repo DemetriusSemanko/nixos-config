@@ -20,6 +20,9 @@
     enable = true;
   };
 
+  # Steam
+  programs.steam.enable = true;
+
   # Docker
   virtualisation = {
     docker = {
