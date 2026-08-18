@@ -20,6 +20,9 @@
     enable = true;
   };
 
+  # SSH Agent
+  programs.ssh.startAgent = true;
+
   # Steam
   programs.steam.enable = true;
 
