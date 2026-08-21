@@ -3,8 +3,12 @@
     enable = true;
     settings = {
       signing = {
-        behavior = "own";
-        backend = "gpg";
+        behavior = "drop";
+        backend = "ssh";
+        key = "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIAKlJadcjUHFC9rrdq9x6pK/I4tcR8PtRSAUovHhQMAt";
+      };
+      git = {
+        sign-on-push = true;
       };
       user = {
         name = "Demetrius Semanko";
