@@ -3,7 +3,7 @@
     enable = true;
     settings = {
       signing = {
-        behavior = "own";
+        behavior = "drop";
         backend = "ssh";
         key = "~/.ssh/id_ed25519.pub";
       };
