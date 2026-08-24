@@ -5,7 +5,7 @@
       signing = {
         behavior = "drop";
         backend = "ssh";
-        key = "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIAKlJadcjUHFC9rrdq9x6pK/I4tcR8PtRSAUovHhQMAt";
+        key = "~/.ssh/id_ed25519.pub";
       };
       git = {
         sign-on-push = true;
