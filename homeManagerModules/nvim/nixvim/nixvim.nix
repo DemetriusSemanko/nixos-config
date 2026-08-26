@@ -41,7 +41,7 @@
         lua = [ "stylua" ];
         css = [ "prettier" ];
         java = [ "google-java-format" ];
-        astro = [ "deno_fmt" ];
+        astro = [ "prettier" ];
         markdown = [ "deno_fmt" ];
       };
       luaConfig.post = ''
