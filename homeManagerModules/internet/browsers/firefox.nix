@@ -63,6 +63,10 @@
               "@sourcegraph"
             ] "https://sourcegraph.com/search?q={searchTerms}" "png";
 
+            "TruePeopleSearch Phone" = mkEngine [
+              "@tpsp"
+            ] "https://www.truepeoplesearch.com/resultphone?phoneno={searchTerms}" "ico";
+
             ## Web
             "MDN Web Docs" = mkEngine [
               "@mdn"
