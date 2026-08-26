@@ -63,9 +63,14 @@
               "@sourcegraph"
             ] "https://sourcegraph.com/search?q={searchTerms}" "png";
 
+            ## OSINT
             "TruePeopleSearch Phone" = mkEngine [
               "@tpsp"
             ] "https://www.truepeoplesearch.com/resultphone?phoneno={searchTerms}" "ico";
+
+            "TruePeopleSearch Name" = mkEngine [
+              "@tpsn"
+            ] "https://www.truepeoplesearch.com/results?name={searchTerms}" "ico";
 
             ## Web
             "MDN Web Docs" = mkEngine [
