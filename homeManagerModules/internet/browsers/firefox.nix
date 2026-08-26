@@ -72,6 +72,10 @@
               "@tpsn"
             ] "https://www.truepeoplesearch.com/results?name={searchTerms}" "ico";
 
+            "TruePeopleSearch Email" = mkEngine [
+              "@tpse"
+            ] "https://www.truepeoplesearch.com/resultemail?email={searchTerms}" "ico";
+
             ## Web
             "MDN Web Docs" = mkEngine [
               "@mdn"
