@@ -213,11 +213,15 @@
         "uBlock0@raymondhill.net" = {
           install_url = "https://addons.mozilla.org/firefox/downloads/latest/uBlock0@raymondhill.net/latest.xpi";
           installation_mode = "force_installed";
-        }; # uBlock settings
+        }; # uBlock
         "{a9c2ad37-e940-4892-8dce-cd73c6cbbc0c}" = {
           install_url = "https://addons.mozilla.org/firefox/downloads/latest/{a9c2ad37-e940-4892-8dce-cd73c6cbbc0c}/latest.xpi";
           installation_mode = "force_installed";
-        }; # Feedbro settings
+        }; # Feedbro
+        "keepassxc-browser@keepassxc.org" = {
+          install_url = "https://addons.mozilla.org/firefox/downloads/latest/keepassxc-browser@keepassxc.org/latest.xpi";
+          installation_mode = "force_installed";
+        }; # KeepassXC
       }; # programs.firefox.policies.ExtensionSettings
       OfferToSaveLogins = false;
       Preferences = {
