@@ -87,6 +87,16 @@
       variant = "";
     };
   };
+  services.keyd = {
+    enable = true;
+    keyboards.default.settings.main = {
+      # Maps capslock to escape when pressed and control when held.
+      "capslock" = "esc";
+
+      # Remaps the escape key to capslock
+      "esc" = "capslock";
+    };
+  };
   services.libinput.enable = true;
   services.desktopManager.plasma6.enable = true;
 
