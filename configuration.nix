@@ -15,11 +15,6 @@
     ./hardware-configuration.nix
   ];
 
-  services.dbus.packages = [ pkgs.gcr ];
-  programs.gnupg.agent = {
-    enable = true;
-  };
-
   # SSH Agent
   programs.ssh.startAgent = true;
 
