@@ -80,11 +80,13 @@
   };
 
   # Configure keymap in X11
-  services.xserver.xkb = {
-    layout = "us";
-    variant = "";
+  services.xserver = {
+    enable = true;
+    xkb = {
+      layout = "us";
+      variant = "";
+    };
   };
-  services.xserver.enable = true;
   services.libinput.enable = true;
   services.desktopManager.plasma6.enable = true;
 
