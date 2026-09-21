@@ -23,6 +23,9 @@
         ];
         editor = "nvim";
       };
+      merge.same-change = "keep";
+      templates.git_push_bookmark = "'\"demsem/auto-\" ++ change_id.short()'";
+
       aliases = {
         "d" = [
           "desc"
