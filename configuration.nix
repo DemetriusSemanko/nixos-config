@@ -171,8 +171,6 @@
     typst
     nerd-fonts.fira-code
     newcomputermodern
-    gnupg
-    pinentry-curses
     incus
   ];
 
