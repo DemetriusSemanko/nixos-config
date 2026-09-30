@@ -15,12 +15,6 @@
         email = "demetrius@demsem.dev";
       };
       ui = {
-        default-command = [
-          "log"
-          "--reversed"
-          "-r"
-          "ancestors(@, 5)"
-        ];
         editor = "nvim";
       };
       merge.same-change = "keep";
