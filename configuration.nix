@@ -168,9 +168,6 @@
     clippy
     wl-clipboard
     rustlings
-    libreoffice-qt
-    hunspell
-    hunspellDicts.en_US
     typst
     nerd-fonts.fira-code
     newcomputermodern
