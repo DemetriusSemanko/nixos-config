@@ -21,26 +21,6 @@
   # Steam
   programs.steam.enable = true;
 
-  # Docker
-  virtualisation = {
-    docker = {
-      enable = true;
-    };
-    # oci-containers = {
-    #   backend = "docker";
-    #   containers = {
-    #     degoog = {
-    #       image = "ghcr.io/fccview/degoog:latest";
-    #       ports = [ "4444:4444" ];
-    #     };
-    #     searxng = {
-    #       image = "ghcr.io/searxng/searxng:latest";
-    #       ports = [ "8888:8080" ];
-    #     };
-    #   };
-    # };
-  };
-
   # Bootloader.
   boot.loader.systemd-boot.enable = true;
   boot.loader.efi.canTouchEfiVariables = true;
