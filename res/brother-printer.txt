@@ -1,0 +1,17 @@
+
+drivers = (
+  pkgs.linkFarm "drivers" [
+    {
+      name = "share/cups/model/Brother_Printer.ppd";
+      path = ./res/Brother_Printer.ppd;
+    }
+  ]
+);
+
+{
+  name = "Brother_Printer";
+  description = "B&W Printer-Scanner";
+  location = "The Room";
+  deviceUri = "ipp://BRW485F9972E7C7.local:632/ipp/print";
+  model = "Brother_Printer.ppd";
+}
