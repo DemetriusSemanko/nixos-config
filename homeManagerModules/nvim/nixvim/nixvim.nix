@@ -103,6 +103,15 @@
         };
         action = ":Neotree toggle reveal<CR>";
       }
+
+      {
+        key = "<leader>f";
+        mode = "n";
+        options = {
+          silent = true;
+        };
+        action = ":Format<CR>";
+      }
     ];
   };
 
