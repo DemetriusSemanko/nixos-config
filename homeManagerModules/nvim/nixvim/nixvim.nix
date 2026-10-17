@@ -15,6 +15,19 @@
         highlight.enable = true;
       };
     };
+    plugins.neo-tree = {
+      enable = true;
+      settings = {
+        close_if_last_window = true;
+        filesystem = {
+          follow_current_file = {
+            enabled = true;
+            leave_dirs_open = true;
+          };
+        };
+      };
+    };
+
     lsp = {
       servers.ruff.enable = true; # Python, linting and formatting
       servers.ty.enable = true; # Python, type checking
@@ -80,5 +93,17 @@
       enable = true;
       settings.open_mapping = "[[<C-\\>]]";
     };
+    # From bwc9876.dev's config
+    keymaps = [
+      {
+        key = "<leader><Tab>";
+        mode = "n";
+        options = {
+          silent = true;
+        };
+        action = ":Neotree toggle reveal<CR>";
+      }
+    ];
   };
+
 }
