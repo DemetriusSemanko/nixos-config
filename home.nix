@@ -5,7 +5,7 @@
 }:
 {
   imports = [
-    inputs.nixvim.homeModules.nixvim
+    inputs.nvf.homeManagerModules.default
     ./homeManagerModules
   ];
 
@@ -15,5 +15,6 @@
     signal-desktop
     tinymist
     rustc
+    rustfmt
   ];
 }
