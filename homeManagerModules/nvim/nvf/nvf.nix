@@ -1,6 +1,7 @@
 { pkgs, ... }: {
   programs.nvf = {
     enable = true;
+    defaultEditor = true;
     settings = {
       vim = {
         lsp = {
