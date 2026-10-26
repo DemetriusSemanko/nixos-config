@@ -116,6 +116,8 @@
         notify.nvim-notify.enable = true;
         telescope.enable = true;
 
+        git.enable = true;
+
         opts.mouse = "";
 
         keymaps = [
