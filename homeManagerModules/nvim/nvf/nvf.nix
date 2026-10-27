@@ -74,6 +74,8 @@
             format.type = [ "rustfmt" ];
           };
 
+          jinja.enable = true;
+
           lua.enable = true;
 
           typst.enable = true;
