@@ -11,9 +11,14 @@ alias b := build
 build:
     nh os build -k .#delphi
 
+# Private, generic command to make new revset with a message
+_mk-new-rev message:
+    jj new -m "{{ message }}"
+
+msg := "flake: update"
 alias u := update
 # Updates flake.lock file (using `nh`)
-update:
+update: (_mk-new-rev msg)
     nh os build -k --update .#delphi
 
 # Collects garbage (using `nh`)
