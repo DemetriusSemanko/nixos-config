@@ -15,6 +15,8 @@
     ./hardware-configuration.nix
   ];
 
+  programs.gamescope.enable = true;
+
   # SSH Agent
   programs.ssh.startAgent = true;
 
