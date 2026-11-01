@@ -6,5 +6,6 @@
     ./support
     ./terminal
     ./vcs
+    ./minecraft.nix
   ];
 }
