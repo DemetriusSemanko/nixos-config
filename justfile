@@ -11,6 +11,11 @@ alias b := build
 build:
     nh os build -k .#delphi
 
+alias t := test
+# Builds a test configuration (using `nh`)
+test:
+    nh os test .#delphi
+
 # Private, generic command to make new revset with a message
 _mk-new-rev message:
     jj new -m "{{ message }}"
