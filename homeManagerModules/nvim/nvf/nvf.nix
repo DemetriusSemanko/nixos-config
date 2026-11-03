@@ -4,6 +4,7 @@
     defaultEditor = true;
     settings = {
       vim = {
+        spellcheck.enable = true;
         lsp = {
           enable = true;
           formatOnSave = true;
