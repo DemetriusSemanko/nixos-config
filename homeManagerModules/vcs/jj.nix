@@ -7,8 +7,8 @@
         backend = "ssh";
         key = "~/.ssh/id_ed25519.pub";
       };
-      git = {
-        sign-on-push = true;
+      revsets = {
+        git-sign-on-push = "~signed() & mine()";
       };
       user = {
         name = "Demetrius Semanko";
